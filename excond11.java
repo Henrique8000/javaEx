@@ -1,4 +1,4 @@
-package testeJava;
+package estrutura_condicional;
 
 import java.util.Scanner;
 import java.util.Locale;
@@ -16,6 +16,18 @@ public class excond11 {
 		int y = sc.nextInt();
 		int z = sc.nextInt();
 		
+		if (x == y && x == z) {
+			System.out.println("MENOR: " + x);
+		}
+		else if (x < y && x < z) {
+			System.out.println("MENOR: " + x);
+		}
+		else if (y < x && y < z) {
+			System.out.println("MENOR: " + y);
+		}
+		else {
+			System.out.println("MENOR: " + z);
+		}
 		
 		sc.close();
 		
