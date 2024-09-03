@@ -14,6 +14,7 @@ public class exrept01 {
 
 		while (senha != 2002) {
 			System.out.println("Senha Invalida");
+			System.out.print("Insira sua senha: ");
 			senha = sc.nextInt();
 		}
 
