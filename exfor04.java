@@ -12,9 +12,11 @@ public class exfor04 {
 	int n = sc.nextInt();
 	int in = 0;
 	int out = 0;
+	int x;
 	
 	for (int i = 0; i<n; i++) {
-		if (i<10 || i>20) {
+		x = sc.nextInt();
+		if (x<10 || x>20) {
 			out += 1;
 		}
 		else {
@@ -26,7 +28,6 @@ public class exfor04 {
 	System.out.println(in + " in");
 	
 	sc.close();
-	
 	
 	}
 
