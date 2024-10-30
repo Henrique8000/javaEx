@@ -20,17 +20,17 @@ public class FuncTeste {
 		int maior = verificaNumeroMaior(n1, n2, n3);
 		showResult(maior);
 		System.out.printf("media entre os três numeros: %.2f", mediaTresNotas(n1, n2, n3)); 
-		
+		System.out.printf("%nA soma entre os três números: %d", somaTresNumeros(n1, n2, n3));
 		sc.close();
 	}
 	
 	public static int verificaNumeroMaior(int a, int b, int c) {
 		
 		int max; 
-		if(a > b && a > c) {
+		if(a >= b && a >= c) {
 			max = a;
 		}
-		else if(b > a && b > c) {
+		else if(b >= a && b >= c) {
 			max = b;
 		}
 		else {
@@ -45,6 +45,11 @@ public class FuncTeste {
 	public static double mediaTresNotas(double x, double y, double z) {
 		double media = (x + y + z) / 3;
 		return media;
+	}
+	
+	public static int somaTresNumeros(int q, int h, int r) {
+		int soma = q + h + r;
+		return soma;
 	}
 
 }
