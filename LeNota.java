@@ -16,12 +16,10 @@ public class LeNota {
 		System.out.print("Insira a sua nota: ");
 		double nota = sc.nextDouble();
 		
-		if (nota < 0 || nota > 10) {
-			while (nota < 0 || nota > 10) {
-				System.out.print("\nInsira uma nota dentro do intervalo de (0 - 10) ");
-				nota = sc.nextDouble();
+		while (nota < 0 || nota > 10) {
+			System.out.print("\nInsira uma nota dentro do intervalo de (0 - 10) ");
+			nota = sc.nextDouble();
 			}
-		}
 
 		System.out.printf("%.2f", nota);
 		
