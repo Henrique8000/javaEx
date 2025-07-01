@@ -20,23 +20,22 @@ public class HrqBank {
 		String accountName = sc.nextLine();
 	
 		System.out.print("Is there an initial deposit (y/n)? ");
-		String isInitial = sc.nextLine();
+		char isInitial = sc.next().charAt(0);
 		
 		Customer customer;
 		
-		if (isInitial.equals("y")) {
+		if (isInitial == 'y') {
 			System.out.print("Enter initial deposit value: ");
 			double initialDeposit = sc.nextDouble();
 			customer = new Customer(accountNumber, accountName, initialDeposit);
-			System.out.println("\nAccount data:");
-			System.out.println(customer);
 		}
 		
 		else {
 			customer = new Customer(accountNumber, accountName);
-			System.out.println("\nAccount data:");
-			System.out.println(customer);
 		}
+		
+		System.out.println("\nAccount data:");
+		System.out.println(customer);
 		
 		System.out.print("\nEnter a deposit value: ");
 		double money = sc.nextDouble();
