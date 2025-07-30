@@ -14,7 +14,7 @@ public class PessoasUtil {
 	}
 	
 	public static double percentMenores(Pessoas[] pessoa) {
-		double qtdMenor = 0.0;
+		int qtdMenor = 0;
 		
 		for (int i=0; i<pessoa.length; i++) {
 			if (pessoa[i].getIdade() < 16) {
@@ -22,7 +22,7 @@ public class PessoasUtil {
 			}
 		}
 		
-		return (qtdMenor / pessoa.length) * 100; 
+		return (qtdMenor * 100.0) / pessoa.length; 
 	}
 	
 	public static double avgAltura(Pessoas[] pessoa) {
