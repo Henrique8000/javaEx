@@ -5,43 +5,39 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Listas {
-
 	public static void main(String[] args) {
 		
 		List<String> list = new ArrayList<>();
 		
-		list.add("Henrique");
-		list.add("Tobi");
-		list.add("Amanda");
-		list.add("Pandora");
-		list.add("Luke");
-		list.add("Maggie");
-		list.add("Michel");
-		list.add("Ana");
+		list.add("Maria");
+		list.add("Alex");
+		list.add("Bob");
+		list.add("Anna");
+		list.add(2, "Marco");
 		
-		list.add(2, "Bob");
-		
-		//list.remove(2);
-		list.removeIf(x -> x.charAt(0) == 'M');
-		
-		System.out.println("Tamanho da lista: " + list.size());
-		for (String nome : list) {
-			System.out.println(nome);
+		System.out.println(list.size());
+		for (String x : list) {
+			System.out.println(x);
 		}
 		
-		System.out.printf("Indice do elemento '%s': %d%n", list.get(5), list.indexOf("Luke"));
+		System.out.println("---------------------");
+		list.removeIf(x -> x.charAt(0) == 'M');
+		for (String x : list) {
+			System.out.println(x);
+		}
+		
+		System.out.println("---------------------");
+		System.out.println("Index of Bob: " + list.indexOf("Bob"));
+		System.out.println("Index of Marco: " + list.indexOf("Marco"));
+		System.out.println("---------------------");
 		
 		List<String> result = list.stream().filter(x -> x.charAt(0) == 'A').collect(Collectors.toList());
-		
-		System.out.println("===============================");
-		for (String nome : result) {
-			System.out.println(nome);
+		for (String x : result) {
+			System.out.println(x);
 		}
 		
-		System.out.println("===============================");
-		String name =  list.stream().filter(x -> x.charAt(0) == 'H').findFirst().orElse(null);
+		System.out.println("---------------------");
+		String name = list.stream().filter(x -> x.charAt(0) == 'J').findFirst().orElse(null);
 		System.out.println(name);
-
 	}
-
 }
