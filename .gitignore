@@ -28,7 +28,10 @@ build/
 .project
 .classpath
 .settings/
+<<<<<<< HEAD
 .metadata/
+=======
+>>>>>>> a2884b0 (Add .gitignore file for Java and IDE settings)
 
 # VS Code
 .vscode/
