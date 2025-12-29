@@ -1,0 +1,37 @@
+# Compilados Java
+*.class
+
+# Logs
+*.log
+
+# Diretórios de build
+target/
+bin/
+out/
+
+# Arquivos temporários
+*.tmp
+*.swp
+
+# Maven
+dependency-reduced-pom.xml
+
+# Gradle
+.gradle/
+build/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# VS Code
+.vscode/
+
+# SO
+.DS_Store
+Thumbs.db
