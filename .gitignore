@@ -29,7 +29,10 @@ build/
 .classpath
 .settings/
 <<<<<<< HEAD
+<<<<<<< HEAD
 .metadata/
+=======
+>>>>>>> a2884b0 (Add .gitignore file for Java and IDE settings)
 =======
 >>>>>>> a2884b0 (Add .gitignore file for Java and IDE settings)
 
