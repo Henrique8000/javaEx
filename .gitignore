@@ -28,6 +28,7 @@ build/
 .project
 .classpath
 .settings/
+.metadata/
 
 # VS Code
 .vscode/
