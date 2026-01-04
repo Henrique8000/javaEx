@@ -44,13 +44,16 @@ public final class Account {
 	}
 	
 	public void deposit(Double amount) {
-		if (amount <= 0.0) {
-			throw new DepositException("O valor depositado não pode ser menor ou igual a 0");
-		}
+		validateDeposit(amount);
 		balance += amount;
 	}
 	
 	public void withdraw(Double amount) {
+		validateWithdraw(amount);
+		balance -= amount;
+	}
+	
+	private void validateWithdraw(Double amount) {
 		if (balance < 0.0) {
 			throw new WithdrawException("Não há saldo na conta");
 		}
@@ -63,8 +66,12 @@ public final class Account {
 		if (amount > balance) {
 			throw new WithdrawException("Saldo insuficiente");
 		}
-		
-		balance -= amount;
+	}
+	
+	private void validateDeposit(Double amount) {
+		if (amount <= 0.0) {
+			throw new DepositException("O valor depositado não pode ser menor ou igual a 0");
+		}
 	}
 	
 }
