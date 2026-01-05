@@ -52,7 +52,7 @@ public class Program {
 					bw.newLine();
 				}
 			}
-			System.out.println("Success!");
+			System.out.println(path + " CREATED");
 		}
 		catch (IOException e) {
 			System.out.println("Error: " + e.getMessage());
