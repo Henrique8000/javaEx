@@ -17,11 +17,16 @@ public class ContractService {
 	}
 	
 	public void processContract(Contract contract, Integer months) {
-		
+	
 		for (int i=0; i<months; i++) {
+			double amount = contract.getTotalValue() / months;
 			LocalDate nextDueDate = contract.getDate().plusMonths(i+1);
 			
-			contract.addInstallment(new Installment());
+			amount = onlinePaymentService.interest(amount, i+1);
+			
+			amount = onlinePaymentService.paymentFee(amount );
+			
+			contract.addInstallment(new Installment(nextDueDate, amount));
 		}
 		
 	}
