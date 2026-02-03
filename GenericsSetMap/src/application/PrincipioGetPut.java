@@ -22,7 +22,7 @@ public class PrincipioGetPut {
 	public static void copy(List<? extends Number> source, List<? super Number> destiny) {
 	// A lista "source" é um caso de covariancia: get = OK / put = error
 		
-	// A lista "destiny" é um caso de contravariância: get = error put = OK
+	// A lista "destiny" é um caso de contravariância: get = error / put = OK
 	
 		for (Number number : source) {
 			destiny.add(number);
