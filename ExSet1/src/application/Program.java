@@ -3,9 +3,12 @@ package application;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.time.Instant;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
+
+import entities.LogEntry;
 
 public class Program {
 	
@@ -25,7 +28,7 @@ public class Program {
 		
 		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
 			
-			Set<String> logs = new HashSet<>();
+			Set<LogEntry> logs = new HashSet<>();
 			
 			String line = br.readLine();
 			
@@ -33,7 +36,7 @@ public class Program {
 				
 				String singleLine[] = line.split(" ");
 				
-				logs.add(singleLine[0]);
+				logs.add(new LogEntry(singleLine[0], Instant.parse(singleLine[1])));
 				
 				line = br.readLine();
 				
@@ -43,7 +46,7 @@ public class Program {
 			
 		}
 		catch (IOException e) {
-			e.printStackTrace();
+			System.out.println("Error: " + e.getMessage());
 		}
 		
 	}
