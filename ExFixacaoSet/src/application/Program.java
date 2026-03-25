@@ -14,8 +14,7 @@ public class Program {
 		
 		try (Scanner sc = new Scanner(System.in)){
 			
-			List<Aluno> alunosCurso = new ArrayList<>();
-
+			Set<Aluno> alunosCurso = new HashSet<>();
 			
 			System.out.print("How many studants for course A? ");
 			int numA = sc.nextInt();
@@ -32,11 +31,7 @@ public class Program {
 			
 			addAluno(numC, alunosCurso, sc);
 			
-			Set<Aluno> alunos = new HashSet<>();
-			
-			alunos.addAll(alunosCurso);
-			
-			System.out.print("Total students: " + alunos.size());
+			System.out.print("Total students: " + alunosCurso.size());
 			
 		}
 		catch (RuntimeException e) {
@@ -44,7 +39,7 @@ public class Program {
 		}
 	}
 	
-	public static void addAluno(Integer n, List<Aluno> x, Scanner sc) {
+	public static void addAluno(Integer n, Set<Aluno> x, Scanner sc) {
 		for (int i=0; i<n; i++) {
 			int id = sc.nextInt();
 			x.add(new Aluno(id));
