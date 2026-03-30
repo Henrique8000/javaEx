@@ -16,11 +16,14 @@ public class AulaComparator {
 		list.add(new Product("Notebook", 1200.00));
 		list.add(new Product("Tablet", 450.00));
 		
+		
 		//Usando Collections + Comparable
 		//Collections.sort(list);
 		
-		//Com Comparator<>
+		
+		//Comparator objeto de classe separada
 		//list.sort(new MyComparator());
+		
 		
 		//Implementacao do Comparator usando classe anonima
 		/*Comparator<Product> comp = new Comparator<Product>() {
@@ -32,6 +35,7 @@ public class AulaComparator {
 		
 		list.sort(comp);
 		*/
+		
 		
 		/*Comparator de objeto de expressao lambda com chaves
 		Comparator<Product> comp = (p1, p2) -> { 
@@ -45,6 +49,7 @@ public class AulaComparator {
 		
 		list.sort(comp);
 		*/
+		
 		
 		//passando a funcao anonima/expressao lambda como parametro
 		list.sort((p1, p2) -> p1.getNome().toUpperCase().compareTo(p2.getNome().toUpperCase()));
