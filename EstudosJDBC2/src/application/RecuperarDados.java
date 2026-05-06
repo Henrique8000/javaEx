@@ -7,7 +7,7 @@ import java.sql.Statement;
 
 import db.DB;
 
-public class Program {
+public class RecuperarDados {
 	
 	public static void main(String[] args) {
 		

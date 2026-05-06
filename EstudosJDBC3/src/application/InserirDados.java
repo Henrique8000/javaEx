@@ -11,7 +11,7 @@ import java.util.Locale;
 
 import db.DB;
 
-public class Program {
+public class InserirDados {
 	
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
